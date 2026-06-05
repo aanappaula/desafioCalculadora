@@ -1,0 +1,38 @@
+$primary:   #E91E8C;   // Rosa forte (botões, cabeçalho)
+$secondary: #F8BBD9;   // Rosa claro (linhas alternadas, bordas)
+$light:     #FFF0F7;   // Rosa muito claro (fundo de página)
+$dark:      #880E4F;   // Rosa escuro (texto de destaque, hover)
+$white:     #FFFFFF;
+$body-bg:   $light;
+
+// Tipografia
+$font-family-base: 'Segoe UI', Roboto, sans-serif;
+
+// Botão calcular
+$btn-border-radius: 8px;
+$btn-font-weight: 600;
+
+@import "bootstrap/scss/bootstrap";
+
+// Overrides adicionais
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: lighten($secondary, 10%);
+}
+
+.table thead th {
+  background-color: $primary;
+  color: $white;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.card {
+  border-color: $secondary;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba($primary, 0.15);
+}
+
+.form-control:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+}
